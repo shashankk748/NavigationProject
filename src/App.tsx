@@ -8,7 +8,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // screens
 import Home from './screens/Home';
 import Details from './screens/Details';
-import ToDoList from './screens/ToDoList';
+// import ToDoList from './screens/ToDoList';
 
 export type RootStackPramList = {
   Home: undefined;
@@ -36,7 +36,7 @@ const App = () => {
             title: 'Product details',
           }}
         />
-        <Stack.Screen name="ToDoList" component={ToDoList} />
+        {/* <Stack.Screen name="ToDoList" component={ToDoList} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

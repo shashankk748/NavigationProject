@@ -22,7 +22,7 @@ type HomeProps = NativeStackScreenProps<RootStackPramList, 'Home'>;
 
 const Home = ({navigation}: HomeProps) => {
   //when an object conforming to HomeProps is passed,navigation property is extracted
-  //able to use navigation.navigate because od this prop
+  //able to use navigation.navigate because of this prop
   return (
     <View style={styles.container}>
       <FlatList
@@ -40,14 +40,14 @@ const Home = ({navigation}: HomeProps) => {
           </Pressable>
         )}
       />
-      <View>
+      {/* <View>
         <Button
           title="For To Do List"
           onPress={() => {
             navigation.navigate('ToDoList');
           }}
         />
-      </View>
+      </View> */}
     </View>
   );
 };
