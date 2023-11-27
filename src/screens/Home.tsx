@@ -40,14 +40,14 @@ const Home = ({navigation}: HomeProps) => {
           </Pressable>
         )}
       />
-      {/* <View>
+      <View>
         <Button
-          title="For To Do List"
+          title="To Take Notes"
           onPress={() => {
-            navigation.navigate('ToDoList');
+            navigation.navigate('Notes');
           }}
         />
-      </View> */}
+      </View>
     </View>
   );
 };

@@ -1,4 +1,3 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 // Navigation
@@ -8,12 +7,14 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // screens
 import Home from './screens/Home';
 import Details from './screens/Details';
+import AddNote from './screens/AddNote';
 // import ToDoList from './screens/ToDoList';
-
+import Notes from './screens/Notes';
 export type RootStackPramList = {
   Home: undefined;
   Details: {product: Product};
-  ToDoList: undefined;
+  Notes: undefined;
+  AddNote: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackPramList>();
@@ -36,7 +37,8 @@ const App = () => {
             title: 'Product details',
           }}
         />
-        {/* <Stack.Screen name="ToDoList" component={ToDoList} /> */}
+        <Stack.Screen name="Notes" component={Notes} />
+        <Stack.Screen name="AddNote" component={AddNote} />
       </Stack.Navigator>
     </NavigationContainer>
   );
