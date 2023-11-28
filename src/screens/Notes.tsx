@@ -45,11 +45,18 @@ const Notes: React.FC<NoteProps> = ({navigation}) => {
             }}>
             <Text>{item.title}</Text>
             <TouchableOpacity
-              style={{position: 'absolute', right: 20, top: 10}}
+              style={{
+                position: 'absolute',
+                right: 20,
+                top: 10,
+                borderColor: 'black',
+              }}
               onPress={() => {
                 MyNotes.deleteMyNote(item.id);
                 setNotes([...MyNotes.notes]);
-              }}></TouchableOpacity>
+              }}>
+              <Text>X</Text>
+            </TouchableOpacity>
           </View>
         )}
         keyExtractor={item => item.id}

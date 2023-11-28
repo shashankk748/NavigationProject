@@ -5,7 +5,7 @@ class MyNotes {
   constructor() {
     //initializes MyNotes class and sets up MobX to make certain properties observable and actions within the class.
     makeObservable(
-      this,
+      this, // for current instance of Notes
       {
         addMyNotes: action, //here,action,observable are state and this file is a collection of these states
         deleteMyNote: action, // so, this file  is a store
