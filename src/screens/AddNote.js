@@ -1,7 +1,6 @@
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
-import Notes, {notesStore} from './Notes';
-import MyNotes, {mynotesStore} from '../store/MyNotes';
+import MyNotes from '../store/MyNotes';
 const AddNote = ({navigation}) => {
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');

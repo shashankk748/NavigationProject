@@ -40,19 +40,43 @@ const Home = ({navigation}: HomeProps) => {
           </Pressable>
         )}
       />
-      <View>
-        <Button
-          title="To Take Notes"
-          onPress={() => {
-            navigation.navigate('Notes');
-          }}
-        />
+      <View style={styles.container2}>
+        <View style={styles.buttonContainer}>
+          <Button
+            title="To Take Notes"
+            onPress={() => {
+              navigation.navigate('Notes');
+            }}
+          />
+        </View>
+        <View style={styles.buttonContainer}>
+          <Button
+            title="To Go To Increment and decrement option"
+            onPress={() => {
+              navigation.navigate('Count');
+            }}
+          />
+        </View>
       </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+  },
+  button: {
+    padding: 20,
+    backgroundColor: '#ccc',
+    marginHorizontal: 10,
+    borderRadius: 5,
+  },
   container: {
     flex: 1,
     alignItems: 'flex-start',
